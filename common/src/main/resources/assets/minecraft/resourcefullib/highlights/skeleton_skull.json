@@ -1,0 +1,19 @@
+{
+    "variants": {
+        "rotation=1": "minecraft:skull_shape_1",
+        "rotation=2": "minecraft:skull_shape_2",
+        "rotation=3": "minecraft:skull_shape_3",
+
+        "rotation=5": "minecraft:skull_shape_1",
+        "rotation=6": "minecraft:skull_shape_2",
+        "rotation=7": "minecraft:skull_shape_3",
+
+        "rotation=9": "minecraft:skull_shape_1",
+        "rotation=10": "minecraft:skull_shape_2",
+        "rotation=11": "minecraft:skull_shape_3",
+
+        "rotation=13": "minecraft:skull_shape_1",
+        "rotation=14": "minecraft:skull_shape_2",
+        "rotation=15": "minecraft:skull_shape_3"
+    }
+}

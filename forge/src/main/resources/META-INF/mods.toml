@@ -1,0 +1,35 @@
+modLoader = "lowcodefml"
+loaderVersion = "[43,)"
+license = "MIT"
+issueTrackerURL="https://github.com/Resourceful-Bees/Highlight/issues"
+
+[[mods]]
+modId = "highlight"
+version = "${version}"
+displayName = "Highlight"
+authors = "ThatGravyBoat"
+displayTest="IGNORE_ALL_VERSION"
+description = '''
+Highlight changes certain vanilla blocks from using ridgid selection/highlight shapes into have more defined ones with angles.
+'''
+
+[[dependencies.highlight]]
+    modId = "forge"
+    mandatory = true
+    versionRange = "[43,)"
+    ordering = "NONE"
+    side = "BOTH"
+
+[[dependencies.highlight]]
+    modId = "minecraft"
+    mandatory = true
+    versionRange = "[1.19.2,1.20)"
+    ordering = "NONE"
+    side = "BOTH"
+
+[[dependencies.highlight]]
+    modId = "resourcefullib"
+    mandatory = true
+    versionRange = "[1,)"
+    ordering = "NONE"
+    side = "BOTH"

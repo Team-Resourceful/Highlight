@@ -1,0 +1,20 @@
+{
+    "schemaVersion": 1,
+    "id": "highlight",
+    "version": "${version}",
+    "name": "Highlight",
+    "description": "Highlight changes certain vanilla blocks from using ridgid selection/highlight shapes into have more defined ones with angles.",
+    "authors": [
+        "ThatGravyBoat"
+    ],
+    "contact": {
+        "issues": "https://github.com/Resourceful-Bees/Highlight/issues"
+    },
+    "license": "MIT",
+    "environment": "*",
+    "depends": {
+        "fabricloader": ">=0.14.9",
+        "minecraft": ">=1.19.2",
+        "resourcefullib": "*"
+    }
+}
