@@ -1,0 +1,25 @@
+{
+  "variants": {
+	"shape=ascending_north": {
+      "highlight": "minecraft:rail_raised_shape"
+    },
+    "shape=ascending_east": {
+      "highlight": "minecraft:rail_raised_shape",
+      "rotation": { "y": 90 }
+    },
+    "shape=ascending_south": {
+      "highlight": "minecraft:rail_raised_shape",
+      "rotation": { "y": 180 }
+    },
+    "shape=ascending_west": {
+      "highlight": "minecraft:rail_raised_shape",
+      "rotation": { "y": 270 }
+    },
+    "shape=east_west": {
+      "highlight": "minecraft:rail_shape"
+    },
+    "shape=north_south": {
+      "highlight": "minecraft:rail_shape"
+    }
+  }
+}

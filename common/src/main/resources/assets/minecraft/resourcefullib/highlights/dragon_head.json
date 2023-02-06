@@ -1,0 +1,64 @@
+{
+    "variants": {
+		"rotation=0": {
+            "highlight": "minecraft:dragon_head_shape_0"
+        },
+		"rotation=1": {
+            "highlight": "minecraft:dragon_head_shape_1"
+        },
+		"rotation=2": {
+            "highlight": "minecraft:dragon_head_shape_2"
+        },
+		"rotation=3": {
+            "highlight": "minecraft:dragon_head_shape_3"
+        },
+		"rotation=4": {
+            "highlight": "minecraft:dragon_head_shape_0",
+            "rotation": { "y": 90 }
+        },
+		"rotation=5": {
+            "highlight": "minecraft:dragon_head_shape_1",
+            "rotation": { "y": 90 }
+        },
+		"rotation=6": {
+            "highlight": "minecraft:dragon_head_shape_2",
+            "rotation": { "y": 90 }
+        },
+		"rotation=7": {
+            "highlight": "minecraft:dragon_head_shape_3",
+            "rotation": { "y": 90 }
+        },
+		"rotation=8": {
+            "highlight": "minecraft:dragon_head_shape_0",
+            "rotation": { "y": 180 }
+        },
+		"rotation=9": {
+            "highlight": "minecraft:dragon_head_shape_1",
+            "rotation": { "y": 180 }
+        },
+		"rotation=10": {
+            "highlight": "minecraft:dragon_head_shape_2",
+            "rotation": { "y": 180 }
+        },
+		"rotation=11": {
+            "highlight": "minecraft:dragon_head_shape_3",
+            "rotation": { "y": 180 }
+        },
+		"rotation=12": {
+            "highlight": "minecraft:dragon_head_shape_0",
+            "rotation": { "y": 270 }
+        },
+		"rotation=13": {
+            "highlight": "minecraft:dragon_head_shape_1",
+            "rotation": { "y": 270 }
+        },
+		"rotation=14": {
+            "highlight": "minecraft:dragon_head_shape_2",
+            "rotation": { "y": 270 }
+        },
+		"rotation=15": {
+            "highlight": "minecraft:dragon_head_shape_3",
+            "rotation": { "y": 270 }
+        }
+    }
+}
