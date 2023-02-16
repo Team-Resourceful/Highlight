@@ -1,0 +1,20 @@
+{
+    "variants": {
+		"facing=north": {
+            "highlight": "minecraft:dragon_wall_head_shape",
+            "rotation": { "y": 0 }
+        },
+		"facing=east": {
+            "highlight": "minecraft:dragon_wall_head_shape",
+            "rotation": { "y": 90 }
+        },
+		"facing=south": {
+            "highlight": "minecraft:dragon_wall_head_shape",
+            "rotation": { "y": 180 }
+        },
+		"facing=west": {
+            "highlight": "minecraft:dragon_wall_head_shape",
+            "rotation": { "y": 270 }
+        }
+    }
+}

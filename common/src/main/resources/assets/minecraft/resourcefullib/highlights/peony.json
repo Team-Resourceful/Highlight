@@ -1,0 +1,10 @@
+{
+    "variants": {
+		"half=lower": {
+            "highlight": "minecraft:tall_plant_bottom_shape"
+        },
+		"half=upper": {
+            "highlight": "minecraft:tall_plant_top_shape"
+        }
+    }
+}
