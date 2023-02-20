@@ -1,0 +1,19 @@
+{
+    "variants": {
+		"facing=north": {
+            "highlight": "minecraft:wall_torch_shape",
+            "rotation": { "y": 270 }
+        },
+		"facing=east": {
+            "highlight": "minecraft:wall_torch_shape"
+        },
+        "facing=south": {
+            "highlight": "minecraft:wall_torch_shape",
+            "rotation": { "y": 90 }
+        },
+        "facing=west": {
+            "highlight": "minecraft:wall_torch_shape",
+            "rotation": { "y": 180 }
+        }
+    }
+}

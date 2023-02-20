@@ -10,6 +10,11 @@
     "contact": {
         "issues": "https://github.com/Resourceful-Bees/Highlight/issues"
     },
+    "entrypoints": {
+        "client": [
+            "com.teamresourceful.highlight.HighlightClient"
+        ]
+    },
     "license": "MIT",
     "environment": "*",
     "depends": {

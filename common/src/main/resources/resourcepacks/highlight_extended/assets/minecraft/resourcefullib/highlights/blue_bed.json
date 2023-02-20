@@ -1,0 +1,42 @@
+{
+    "variants": {
+		"part=head,facing=south": {
+            "highlight": "minecraft:bed_shape"
+        },
+        "part=head,facing=north": {
+            "highlight": "minecraft:bed_shape",
+            "translation": [0, 0, 1]
+        },
+        "part=head,facing=west": {
+            "highlight": "minecraft:bed_shape",
+            "rotation": {
+                "y": 90
+            }
+        },
+        "part=head,facing=east": {
+            "highlight": "minecraft:bed_shape",
+            "rotation": {
+                "y": -90
+            }
+        },
+        "part=foot,facing=south": {
+            "highlight": "minecraft:bed_shape",
+            "translation": [0, 0, 1]
+        },
+        "part=foot,facing=north": {
+            "highlight": "minecraft:bed_shape"
+        },
+        "part=foot,facing=west": {
+            "highlight": "minecraft:bed_shape",
+            "rotation": {
+                "y": -90
+            }
+        },
+        "part=foot,facing=east": {
+            "highlight": "minecraft:bed_shape",
+            "rotation": {
+                "y": 90
+            }
+        }
+    }
+}

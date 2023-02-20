@@ -1,0 +1,11 @@
+{
+    "variants": {
+		"half=lower": {
+            "highlight": "minecraft:tall_plant_offset_shape"
+        },
+		"half=upper": {
+            "highlight": "minecraft:tall_plant_offset_shape",
+            "translation": [0, -1, 0]
+        }
+    }
+}
