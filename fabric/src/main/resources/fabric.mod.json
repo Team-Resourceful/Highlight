@@ -8,7 +8,9 @@
         "ThatGravyBoat"
     ],
     "contact": {
-        "issues": "https://github.com/Resourceful-Bees/Highlight/issues"
+        "issues": "https://github.com/Team-Resourceful/Highlight/issues",
+        "sources": "https://github.com/Team-Resourceful/Highlight",
+        "homepage": "https://resourcefulbees.com"
     },
     "entrypoints": {
         "client": [
@@ -18,8 +20,8 @@
     "license": "MIT",
     "environment": "*",
     "depends": {
-        "fabricloader": ">=0.14.11",
-        "minecraft": ">=1.19.3",
+        "fabricloader": ">=0.14.17",
+        "minecraft": ">=1.19.4",
         "resourcefullib": "*"
     }
 }
