@@ -1,0 +1,53 @@
+{
+  "username": "Beekeeper",
+  "avatar_url": "https://cdn.discordapp.com/avatars/738571182101626930/72ad643b1ee4036cd79f8c457ed1d420.png",
+  "content": "<@&1070878228924858370>",
+  "embeds": [
+    {
+      "title": "Highlight",
+      "color": 1727425,
+      "description": "A new update is available!",
+      "timestamp": "",
+      "author": {
+        "name": "Team Resourceful",
+        "url": "https://teamresourceful.com"
+      },
+      "image": {
+        "url": ""
+      },
+      "thumbnail": {
+        "url": "https://www.bisecthosting.com/images/CF/Highlight/BH_H_Logo.png"
+      },
+      "footer": {
+        "text": "Support us on Patreon or by using code TEAMRESOURCEFUL to get a discounted server from Bisect Hosting"
+      },
+      "fields": [
+        {
+          "name": "Changelog",
+          "value": "[View Changelog](https://raw.githubusercontent.com/Team-Resourceful/Highlight/1.20.x/changelog.md)"
+        },
+        {
+          "name": "Mod Version",
+          "value": "${version}"
+        },
+        {
+          "name": "Minecraft Version",
+          "value": "${mc_version}"
+        },
+        {
+          "name": "Forge Version",
+          "value": "${forge_version}"
+        },
+        {
+          "name": "Fabric Version",
+          "value": "${fabric_version}"
+        },
+        {
+          "name": "Download",
+          "value": "[Curseforge](https://www.curseforge.com/minecraft/mc-mods/highlight)\\n[Modrinth](https://modrinth.com/mod/highlight)"
+        }
+      ]
+    }
+  ],
+  "components": []
+}
