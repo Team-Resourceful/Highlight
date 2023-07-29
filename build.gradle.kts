@@ -9,21 +9,27 @@ plugins {
     id("architectury-plugin") version "3.4-SNAPSHOT" apply false
 }
 
+version = project.extensions.getByType<VersionCatalogsExtension>()
+    .named("libs")
+    .findVersion("mod-version").get()
+    .requiredVersion
+
 subprojects {
     apply(plugin = "dev.architectury.loom")
     apply(plugin = "architectury-plugin")
 
     val minecraftVersion: String by project
+    val modName = rootProject.name
     val modLoader = project.name
     val isCommon = modLoader == rootProject.projects.common.name
+    val loom: LoomGradleExtensionAPI by project
+    version = rootProject.version
 
     base {
-        archivesName.set("${rootProject.name}-$modLoader-$minecraftVersion")
+        archivesName.set("$modName-$modLoader-$minecraftVersion")
     }
 
-    configure<LoomGradleExtensionAPI> {
-        silentMojangMappingsLicense()
-    }
+    loom.silentMojangMappingsLicense()
 
     repositories {
         maven(url = "https://nexus.resourcefulbees.com/repository/maven-public/")
@@ -33,7 +39,7 @@ subprojects {
         val resourcefulLibVersion: String by project
 
         "minecraft"("::${minecraftVersion}")
-        "mappings"(project.the<LoomGradleExtensionAPI>().officialMojangMappings())
+        "mappings"(loom.officialMojangMappings())
 
         val rlib = "modImplementation"(group = "com.teamresourceful.resourcefullib", name = "resourcefullib-$modLoader-$minecraftVersion", version = resourcefulLibVersion)
         if (!isCommon) {
@@ -75,16 +81,12 @@ subprojects {
 
 resourcefulGradle {
     templates {
-        val modVersion: String = project.extensions.getByType<VersionCatalogsExtension>()
-            .named("libs")
-            .findVersion("mod-version").get()
-            .requiredVersion
         val minecraftVersion: String by rootProject
 
         register("discordEmbed") {
             source.set(file("templates/release_embed.json.template"))
             injectedValues.set(mapOf(
-                "version" to modVersion,
+                "version" to version,
                 "mc_version" to minecraftVersion,
                 "forge_version" to "46.0.10",
                 "fabric_version" to "0.14.21"
