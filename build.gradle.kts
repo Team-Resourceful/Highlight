@@ -85,12 +85,17 @@ resourcefulGradle {
         val minecraftVersion: String by rootProject
 
         register("discordEmbed") {
+            val fabricLink: String? = System.getenv("FABRIC_RELEASE_URL")
+            val forgeLink: String? = System.getenv("FORGE_RELEASE_URL")
+
             source.set(file("templates/release_embed.json.template"))
             injectedValues.set(mapOf(
                 "version" to version,
                 "mc_version" to minecraftVersion,
                 "forge_version" to "20.2.56-beta",
-                "fabric_version" to "0.14.24"
+                "fabric_version" to "0.14.24",
+                "fabric_link" to fabricLink,
+                "forge_link" to forgeLink
             ))
         }
     }
