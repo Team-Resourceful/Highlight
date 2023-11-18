@@ -5,7 +5,7 @@ import net.fabricmc.loom.task.RemapJarTask
 plugins {
     java
     id("com.teamresourceful.resourcefulgradle")
-    id("dev.architectury.loom") version "1.2-SNAPSHOT" apply false
+    id("dev.architectury.loom") version "1.4-SNAPSHOT" apply false
     id("architectury-plugin") version "3.4-SNAPSHOT" apply false
 }
 
@@ -33,6 +33,7 @@ subprojects {
 
     repositories {
         maven(url = "https://nexus.resourcefulbees.com/repository/maven-public/")
+        maven(url = "https://maven.neoforged.net/releases/")
     }
 
     dependencies {
@@ -88,8 +89,8 @@ resourcefulGradle {
             injectedValues.set(mapOf(
                 "version" to version,
                 "mc_version" to minecraftVersion,
-                "forge_version" to "46.0.10",
-                "fabric_version" to "0.14.21"
+                "forge_version" to "20.2.56-beta",
+                "fabric_version" to "0.14.24"
             ))
         }
     }

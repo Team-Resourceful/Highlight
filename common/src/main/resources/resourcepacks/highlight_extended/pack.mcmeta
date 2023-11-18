@@ -1,6 +1,6 @@
 {
     "pack": {
-        "pack_format": 15,
+        "pack_format": 18,
         "description": "Gives 2+ tall or wide blocks a box that covers the whole block."
     }
 }

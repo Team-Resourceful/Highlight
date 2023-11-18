@@ -1,17 +1,17 @@
 modLoader = "lowcodefml"
-loaderVersion = "[46,)"
+loaderVersion = "[1,)"
 license = "MIT"
 issueTrackerURL="https://github.com/Team-Resourceful/Highlight/issues"
 
 [[mods]]
-modId = "highlight"
-version = "${version}"
-displayName = "Highlight"
-authors = "ThatGravyBoat"
-displayTest="IGNORE_ALL_VERSION"
-description = '''
-Highlight changes certain vanilla blocks from using ridgid selection/highlight shapes into have more defined ones with angles.
-'''
+    modId = "highlight"
+    version = "${version}"
+    displayName = "Highlight"
+    authors = "ThatGravyBoat"
+    displayTest="IGNORE_ALL_VERSION"
+    description = '''
+    Highlight changes certain vanilla blocks from using ridgid selection/highlight shapes into have more defined ones with angles.
+    '''
 
 [modproperties.highlight]
     'resourcefullib:resourcepack' = [
@@ -19,16 +19,16 @@ Highlight changes certain vanilla blocks from using ridgid selection/highlight s
     ]
 
 [[dependencies.highlight]]
-    modId = "forge"
+    modId = "neoforge"
     mandatory = true
-    versionRange = "[46,)"
+    versionRange = "[20.2,)"
     ordering = "NONE"
     side = "BOTH"
 
 [[dependencies.highlight]]
     modId = "minecraft"
     mandatory = true
-    versionRange = "[1.20,)"
+    versionRange = "[1.20.2,)"
     ordering = "NONE"
     side = "BOTH"
 
