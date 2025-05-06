@@ -1,0 +1,23 @@
+[versions]
+
+# Minecraft
+minecraft = "1.21.4"
+fabric-api = "0.119.2"
+neoforge = "21.4.0-beta"
+
+# Libraries
+rlib = "3.4.5"
+
+# Plugins
+resourceful-loom = "1.0.4"
+
+[libraries]
+
+rlib-common = { module = "com.teamresourceful.resourcefullib:resourcefullib-common-1.21.4", version.ref = "rlib" }
+rlib-fabric = { module = "com.teamresourceful.resourcefullib:resourcefullib-fabric-1.21.4", version.ref = "rlib" }
+rlib-neoforge = { module = "com.teamresourceful.resourcefullib:resourcefullib-neoforge-1.21.4", version.ref = "rlib" }
+
+[plugins]
+
+resourceful-loom = { id = "com.teamresourceful.plugins.loom", version.ref = "resourceful-loom" }
+resourceful-gradle = { id = "com.teamresourceful.resourcefulgradle" }

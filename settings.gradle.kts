@@ -4,10 +4,10 @@ rootProject.name = "highlight"
 
 pluginManagement {
     repositories {
-        maven(url = "https://maven.fabricmc.net/")
-        maven(url = "https://maven.architectury.dev/")
-        maven(url = "https://maven.minecraftforge.net/")
-        maven(url = "https://maven.resourcefulbees.com/repository/maven-public/")
+        maven("https://maven.teamresourceful.com/repository/maven-private/") // TODO remove when arch stops breaking 1.21.5
+        maven("https://maven.fabricmc.net/")
+        maven("https://maven.architectury.dev/")
+        maven("https://maven.teamresourceful.com/repository/maven-public/")
         gradlePluginPortal()
     }
 }

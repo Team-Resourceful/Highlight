@@ -1,102 +1,55 @@
-import dev.architectury.plugin.ArchitectPluginExtension
-import net.fabricmc.loom.api.LoomGradleExtensionAPI
-import net.fabricmc.loom.task.RemapJarTask
+import com.teamresourceful.utils.Platform
+import com.teamresourceful.utils.getPlatform
 
 plugins {
     java
-    id("com.teamresourceful.resourcefulgradle")
-    id("dev.architectury.loom") version "1.7-SNAPSHOT" apply false
-    id("architectury-plugin") version "3.4-SNAPSHOT" apply false
+    id("maven-publish")
+    alias(libs.plugins.resourceful.loom)
+    alias(libs.plugins.resourceful.gradle)
 }
-
-version = project.extensions.getByType<VersionCatalogsExtension>()
-    .named("libs")
-    .findVersion("mod-version").get()
-    .requiredVersion
 
 subprojects {
-    apply(plugin = "dev.architectury.loom")
-    apply(plugin = "architectury-plugin")
+    apply(plugin = "maven-publish")
 
-    val minecraftVersion: String by project
-    val modName = rootProject.name
-    val modLoader = project.name
-    val isCommon = modLoader == rootProject.projects.common.name
-    val loom: LoomGradleExtensionAPI by project
-    version = rootProject.version
+    version = rootProject.libs.versions.mod.version.get()
 
-    base {
-        archivesName.set("$modName-$modLoader-$minecraftVersion")
-    }
-
-    loom.silentMojangMappingsLicense()
-
-    repositories {
-        maven(url = "https://maven.teamresourceful.com/repository/maven-public/")
-        maven(url = "https://maven.neoforged.net/releases/")
-    }
+    val platform = getPlatform()
 
     dependencies {
-        val resourcefulLibVersion: String by project
-
-        "minecraft"("::${minecraftVersion}")
-        "mappings"(loom.officialMojangMappings())
-
-        val rlib = "modImplementation"(group = "com.teamresourceful.resourcefullib", name = "resourcefullib-$modLoader-$minecraftVersion", version = resourcefulLibVersion)
-        if (!isCommon) {
-            "include"(rlib)
-        }
-    }
-
-    java {
-        withSourcesJar()
-    }
-
-    tasks.jar {
-        archiveClassifier.set("dev")
-    }
-
-    tasks.named<RemapJarTask>("remapJar") {
-        archiveClassifier.set(null as String?)
-    }
-
-    if (!isCommon) {
-        configure<ArchitectPluginExtension> {
-            platformSetupLoomIde()
-        }
-
-        sourceSets.main {
-            val main = this
-
-            rootProject.projects.common.dependencyProject.sourceSets.main {
-                main.java.source(java)
-                main.resources.source(resources)
+        if (platform == Platform.COMMON) {
+            "api"(rootProject.libs.rlib.common)
+        } else if (platform == Platform.FABRIC) {
+            "modImplementation"(rootProject.libs.rlib.fabric) {
+                "include"(this)
             }
-        }
-
-        dependencies {
-            compileOnly(rootProject.projects.common)
+        } else if (platform == Platform.NEOFORGE) {
+            "modImplementation"(rootProject.libs.rlib.neoforge) {
+                "include"(this)
+            }
         }
     }
 }
+
 
 resourcefulGradle {
     templates {
-        val minecraftVersion: String by rootProject
-
-        register("discordEmbed") {
-            val fabricLink: String? = System.getenv("FABRIC_RELEASE_URL")
-            val forgeLink: String? = System.getenv("FORGE_RELEASE_URL")
-
-            source.set(file("templates/release_embed.json.template"))
-            injectedValues.set(mapOf(
-                "version" to version,
-                "mc_version" to minecraftVersion,
-                "neoforge_version" to "20.5.3-beta",
-                "fabric_version" to "0.15.9",
-                "fabric_link" to fabricLink,
-                "forge_link" to forgeLink
-            ))
+        register("readme") {
+            source = file("templates/README.md.template")
+            injectedValues = mapOf(
+                "version" to libs.versions.mod.version.get(),
+                "minecraft" to libs.versions.minecraft.get(),
+            )
+        }
+        register("discord") {
+            source = file("templates/embed.json.template")
+            injectedValues = mapOf(
+                "version" to libs.versions.mod.version.get(),
+                "minecraft" to libs.versions.minecraft.get(),
+                "neoforge" to libs.versions.neoforge.get(),
+                "fabric" to libs.versions.fabric.api.get(),
+                "fabric_link" to System.getenv("FABRIC_RELEASE_URL"),
+                "neoforge_link" to System.getenv("FORGE_RELEASE_URL"),
+            )
         }
     }
 }
