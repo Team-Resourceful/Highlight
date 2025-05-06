@@ -1,6 +1,9 @@
 {
     "pack": {
         "pack_format": 18,
-        "description": "Gives 2+ tall or wide blocks a box that covers the whole block."
+        "description": {
+            "translate": "resourcepack.highlight_extended.name",
+            "fallback": "Gives 2+ tall or wide blocks a box that covers the whole block."
+        }
     }
 }
