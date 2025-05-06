@@ -33,13 +33,6 @@ subprojects {
 
 resourcefulGradle {
     templates {
-        register("readme") {
-            source = file("templates/README.md.template")
-            injectedValues = mapOf(
-                "version" to libs.versions.mod.version.get(),
-                "minecraft" to libs.versions.minecraft.get(),
-            )
-        }
         register("discord") {
             source = file("templates/embed.json.template")
             injectedValues = mapOf(
