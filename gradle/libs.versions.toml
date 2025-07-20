@@ -1,21 +1,21 @@
 [versions]
 
 # Minecraft
-minecraft = "1.21.4"
-fabric-api = "0.119.2"
-neoforge = "21.4.0-beta"
+minecraft = "1.21.6"
+fabric-api = "0.128.2"
+neoforge = "21.6.20-beta"
 
 # Libraries
-rlib = "3.4.5"
+rlib = "3.6.0"
 
 # Plugins
-resourceful-loom = "1.0.4"
+resourceful-loom = "1.0.5"
 
 [libraries]
 
-rlib-common = { module = "com.teamresourceful.resourcefullib:resourcefullib-common-1.21.4", version.ref = "rlib" }
-rlib-fabric = { module = "com.teamresourceful.resourcefullib:resourcefullib-fabric-1.21.4", version.ref = "rlib" }
-rlib-neoforge = { module = "com.teamresourceful.resourcefullib:resourcefullib-neoforge-1.21.4", version.ref = "rlib" }
+rlib-common = { module = "com.teamresourceful.resourcefullib:resourcefullib-common-1.21.6", version.ref = "rlib" }
+rlib-fabric = { module = "com.teamresourceful.resourcefullib:resourcefullib-fabric-1.21.6", version.ref = "rlib" }
+rlib-neoforge = { module = "com.teamresourceful.resourcefullib:resourcefullib-neoforge-1.21.6", version.ref = "rlib" }
 
 [plugins]
 
