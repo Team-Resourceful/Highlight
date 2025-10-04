@@ -1,0 +1,68 @@
+{
+  "variants": {
+    "facing=north,copper_golem_pose=standing": {
+      "highlight": "minecraft:copper_golem_statue_standing_shape",
+      "rotation": { "y": 0 }
+    },
+    "facing=east,copper_golem_pose=standing": {
+      "highlight": "minecraft:copper_golem_statue_standing_shape",
+      "rotation": { "y": 90 }
+    },
+    "facing=south,copper_golem_pose=standing": {
+      "highlight": "minecraft:copper_golem_statue_standing_shape",
+      "rotation": { "y": 180 }
+    },
+    "facing=west,copper_golem_pose=standing": {
+      "highlight": "minecraft:copper_golem_statue_standing_shape",
+      "rotation": { "y": 270 }
+    },
+    "facing=north,copper_golem_pose=sitting": {
+      "highlight": "minecraft:copper_golem_statue_sitting_shape",
+      "rotation": { "y": 0 }
+    },
+    "facing=east,copper_golem_pose=sitting": {
+      "highlight": "minecraft:copper_golem_statue_sitting_shape",
+      "rotation": { "y": 90 }
+    },
+    "facing=south,copper_golem_pose=sitting": {
+      "highlight": "minecraft:copper_golem_statue_sitting_shape",
+      "rotation": { "y": 180 }
+    },
+    "facing=west,copper_golem_pose=sitting": {
+      "highlight": "minecraft:copper_golem_statue_sitting_shape",
+      "rotation": { "y": 270 }
+    },
+    "facing=north,copper_golem_pose=running": {
+      "highlight": "minecraft:copper_golem_statue_running_shape",
+      "rotation": { "y": 0 }
+    },
+    "facing=east,copper_golem_pose=running": {
+      "highlight": "minecraft:copper_golem_statue_running_shape",
+      "rotation": { "y": 90 }
+    },
+    "facing=south,copper_golem_pose=running": {
+      "highlight": "minecraft:copper_golem_statue_running_shape",
+      "rotation": { "y": 180 }
+    },
+    "facing=west,copper_golem_pose=running": {
+      "highlight": "minecraft:copper_golem_statue_running_shape",
+      "rotation": { "y": 270 }
+    },
+    "facing=north,copper_golem_pose=star": {
+      "highlight": "minecraft:copper_golem_statue_star_shape",
+      "rotation": { "y": 0 }
+    },
+    "facing=east,copper_golem_pose=star": {
+      "highlight": "minecraft:copper_golem_statue_star_shape",
+      "rotation": { "y": 90 }
+    },
+    "facing=south,copper_golem_pose=star": {
+      "highlight": "minecraft:copper_golem_statue_star_shape",
+      "rotation": { "y": 180 }
+    },
+    "facing=west,copper_golem_pose=star": {
+      "highlight": "minecraft:copper_golem_statue_star_shape",
+      "rotation": { "y": 270 }
+    }
+  }
+}
