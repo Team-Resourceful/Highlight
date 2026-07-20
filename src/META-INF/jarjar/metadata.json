@@ -1,0 +1,15 @@
+{
+    "jars": [
+        {
+            "identifier": {
+                "group": "com.teamresourceful.resourcefullib",
+                "artifact": "resourcefullib-neoforge-${minecraft}"
+            },
+            "version": {
+                "range": "[${rlib},)",
+                "artifactVersion": "${rlib}"
+            },
+            "path": "META-INF/jars/resourcefullib-neoforge-${minecraft}-${rlib}.jar"
+        }
+    ]
+}

@@ -1,47 +1,33 @@
-import com.teamresourceful.utils.Platform
-import com.teamresourceful.utils.getPlatform
-
 plugins {
-    java
-    id("maven-publish")
-    alias(libs.plugins.resourceful.loom)
     alias(libs.plugins.resourceful.gradle)
 }
 
-subprojects {
-    apply(plugin = "maven-publish")
+val mcVersion: String by project
+val rlibVersion: String by project
 
-    version = rootProject.libs.versions.mod.version.get()
+tasks.register<Zip>("build") {
+    archiveFileName.set("hightlight-${mcVersion}-${version}.jar")
+    destinationDirectory.set(layout.buildDirectory.dir("libs"))
 
-    val platform = getPlatform()
-
-    dependencies {
-        if (platform == Platform.COMMON) {
-            "api"(rootProject.libs.rlib.common)
-        } else if (platform == Platform.FABRIC) {
-            "modImplementation"(rootProject.libs.rlib.fabric) {
-                "include"(this)
-            }
-        } else if (platform == Platform.NEOFORGE) {
-            "modImplementation"(rootProject.libs.rlib.neoforge) {
-                "include"(this)
-            }
+    from("src") {
+        filesMatching(listOf("**/*.toml", "**/*.json")) {
+            expand(mapOf(
+                "version" to version,
+                "minecraft" to mcVersion,
+                "rlib" to rlibVersion,
+            ))
         }
     }
 }
-
 
 resourcefulGradle {
     templates {
         register("discord") {
             source = file("templates/embed.json.template")
             injectedValues = mapOf(
-                "version" to libs.versions.mod.version.get(),
-                "minecraft" to libs.versions.minecraft.get(),
-                "neoforge" to libs.versions.neoforge.get(),
-                "fabric" to libs.versions.fabric.api.get(),
-                "fabric_link" to System.getenv("FABRIC_RELEASE_URL"),
-                "neoforge_link" to System.getenv("FORGE_RELEASE_URL"),
+                "version" to version,
+                "minecraft" to mcVersion,
+                "link" to System.getenv("RELEASE_URL"),
             )
         }
     }

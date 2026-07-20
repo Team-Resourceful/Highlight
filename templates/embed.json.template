@@ -8,15 +8,9 @@
           "components": [
               {
                   "type": 2,
-                  "label": "Fabric",
+                  "label": "Download",
                   "style": 5,
-                  "url": "https://modrinth.com/mod/highlight/version/${fabric_link}"
-              },
-              {
-                  "type": 2,
-                  "label": "NeoForge",
-                  "style": 5,
-                  "url": "https://modrinth.com/mod/highlight/version/${neoforge_link}"
+                  "url": "https://modrinth.com/mod/highlight/version/${link}"
               }
           ]
 
@@ -49,14 +43,6 @@
         {
           "name": "Minecraft Version",
           "value": "${minecraft}"
-        },
-        {
-          "name": "NeoForge Version",
-          "value": "${neoforge}"
-        },
-        {
-          "name": "Fabric Version",
-          "value": "${fabric}"
         }
       ]
     }

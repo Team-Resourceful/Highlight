@@ -1,0 +1,20 @@
+{
+    "variants": {
+		"facing=north": {
+            "highlight": "minecraft:wall_sign_shape",
+            "rotation": { "y": 0 }
+        },
+		"facing=east": {
+            "highlight": "minecraft:wall_sign_shape",
+            "rotation": { "y": 90 }
+        },
+		"facing=south": {
+            "highlight": "minecraft:wall_sign_shape",
+            "rotation": { "y": 180 }
+        },
+		"facing=west": {
+            "highlight": "minecraft:wall_sign_shape",
+            "rotation": { "y": 270 }
+        }
+    }
+}
