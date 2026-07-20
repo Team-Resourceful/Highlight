@@ -73,9 +73,3 @@ jobs:
         with:
           webhook-url: ${{ secrets.DISCORD_RELEASE_WEBHOOK }}
           raw-data: ./build/embed.json
-
-      - name: Commit Version Updates
-        run: |
-          git config --global user.name "TeamResourcefulBot"
-          git config --global user.email "teamresourcefulbot@users.noreply.github.com"
-          git diff-index --quiet HEAD || { git commit -am "Released v${{ steps.props.outputs.version }}"; git push; }
